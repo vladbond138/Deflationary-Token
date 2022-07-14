@@ -677,7 +677,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract Name is Context, IERC20, Ownable {
+contract AfCoin is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -691,25 +691,25 @@ contract Name is Context, IERC20, Ownable {
     address[] private _excluded;
    
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 42000000 * 10**18;
+    uint256 private _tTotal = 55000000 * 10**18;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "Name COIN";
-    string private _symbol = "Name";
+    string private _name = "AfCoin";
+    string private _symbol = "AFC";
     uint8 private _decimals = 18;
     
-    uint256 public _taxFee = 3;
+    uint256 public _taxFee = 2;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 3;
+    uint256 public _liquidityFee = 2;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     uint256 public _burnFee = 3;
     uint256 private _previousBurnFee = _burnFee;
 
-    uint256 public _charityFee = 5;
-    address public charityWallet = 0x4eF9A651F8656DEf8454178406eEae16FB7Ca458;
+    uint256 public _charityFee = 3;
+    address public charityWallet = 0x981539CDEE98408f7D11C2Ed89706Ecb03502804;
     uint256 private _previouscharityFee = _charityFee;
 
     IUniswapV2Router02 public  uniswapV2Router;
